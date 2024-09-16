@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div :first-child{
+           background-color: red;
+        }
+        div :last-child{
+           background-color: gray;
+        } */
+         /* .first :nth-child(2n+1){
+            color: gray;
+         } */
+         /* .first :nth-last-child(2n+1){
+            color: gray;
+         } */
+           /* p:nth-of-type(2){
+            color: red;
+          } */
+          /* div :only-child{
+            background-color: green;
+          }
+          div :only-of-type{
+background-color: red;
+          } */
+           div:empty{
+            background-color: green;
+            height: 200px;
+            width: 200px;
+           }
+           div :not(.lorem, .font, #name){
+            background-color: yellowgreen;
+          
+           }
+           .font{
+            font-weight: bolder;
+            font-size: 50px;
+            color: green;
+           }
+           /* button:hover{
+            background-color: green;
+            border: 2px solid green;
+           } */
+           /* input:required{
+            background-color: green;
+           }
+           input:enabled{
+            background-color: green;
+           } */
+           input:valid{
+            background-color: green;
+           }
+           :root{
+            --myCol: red
+           }
+           .myname{
+            color: var(--myCol);
+           }
+           .btn:hover::before{
+            content: "i am Button";
+           }
+           .btn:hover::after{
+            content: "dONT cLICK mE";
+           }
+           .click:hover::after{
+            content: '';
+            background-color: bisque;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+
+            background-image: url(images.jpg);
+
+           }
+           input::placeholder{
+            color: red;
+           }
+
+    </style>
+</head>
+<body>
+<center>
+    <p class="click">Click</p>
+    <form action="">
+        <input class="myname" type="text" name="" id="" placeholder="Enter Your Name" required>* <br>
+        <input type="email" name="" id="" placeholder="Enter Your Email" disabled> <br>
+        <input type="password" name="" id="" placeholder="Enter Your Password" readonly> <br>
+        <input type="text" name="" id="" placeholder="Enter Your Last Name" required> <br>
+        <input type="number" name="" id="" placeholder="Enter Your Mobile Number" > <br>
+        <input type="number" name="" id="" placeholder="Enter Your Mobile Number" invalid > <br>
+    </form>
+    <div></div>
+    <button class="btn">Hello Click Me</button>
+    <div class="first">
+        <h1 class="first"> Heyyyy</h1>
+        <h1> Heyyyy</h1>
+        <p> Heyyyy</p>
+    </div>
+    <div class="first">
+        <p> hiiiiiiii</p>
+        <h1 class="font">Hello</h1>
+        <p>hi</p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+    </div>
+    <div class="">
+        <h1>Hello</h1>
+        <h1>i am aaaaaaaaaaaaa</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+    </div>
+    <div class="">
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil?</p>
+    </div>
+</center>
+    
+</body>
+</html>
