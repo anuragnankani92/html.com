@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Flat() Method
+        let arr = [[1,2],[2,3],[0,1],[2,4,[1]]]
+        let newArr= arr.flat(2)
+        console.log(newArr)
+
+
+        //Slice() Method
+        const alphabet = ["a", "b", "c", "d", "e"];
+const newAlpha = alphabet.slice(2,2);
+console.log(newAlpha)
+
+        // Splice() Method
+const alphabets = ["a", "b", "c", "d", "e","f","g"];
+ alphabets.splice(6,0,'anurag','ritik');
+console.log(alphabets);
+
+        //Sort() Method
+        const value=[ "d", "e","a", "b","g"]
+        const names=['pawan','anurag','khushi','ritik','vaishnavi']
+        names.sort()
+        console.log(names)
+        value.sort()
+        console.log(value)
+
+        let array = [4, 2, 1, 7, 8, 0,10,100,20,33,44];
+        //Assending
+        array.sort((a,b)=>{
+            return a - b
+        })
+        // array.sort()
+        console.log(array)
+        //Descending
+       let newArray= array.toSorted((a,b)=>{
+            return b - a
+        })
+        // array.sort()
+        console.log(newArray)
+        //reverse():-
+const fruits = ["z", "a", "m", "c"];
+fruits.sort()
+let newFruits =fruits.toReversed();
+console.log(newFruits);
+
+    //indexOf():-
+const fruit = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruit.indexOf("Apple");
+console.log(position);
+    //lastIndexOf():-
+const fruitIndex = ["Apple", "Orange", "Apple", "Mango"];
+let positions = fruitIndex.lastIndexOf("Apple");
+console.log(positions)
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let age = 101;
+        // if( age >= 18 && age < 60){
+        //     console.log('Yes he is Elegible for Vote')
+
+        // }else if(age >= 60 && age < 80 ){
+        //     console.log('They are senior citizen')
+        // } else if(age >= 80 || age < 100 ){
+        //     console.log('They are super senior citizen')
+        // }
+        // else{
+        //     console.log('No, He is not Eligible')
+        // }
+        let age = parseInt(101);
+        switch (true) {
+            case age >= 18 && age < 60:
+                console.log('Yes he is Elegible for Vote')
+                break;
+            case age >= 60 && age < 80:
+                console.log(' His age is 21')
+                break;
+            case age >= 80 || age < 100:
+                console.log('They are super senior')
+                break;
+            default:
+                console.log('No, He is not Eligible')
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>
