@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hellooo</h1>
+
+    <script>
+        let fname = 'khushi'
+
+        localStorage.setItem('developer',fname)
+
+        console.log(localStorage.getItem('developer'));
+
+
+        let arr = [{
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        },
+        {
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        },
+        {
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        },
+        {
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        }]
+        console.log(arr)
+
+        localStorage.setItem('arrayValue', JSON.stringify(arr));
+
+        console.log( JSON.parse(localStorage.getItem('arrayValue')) );
+
+        let obj ={
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        }
+        localStorage.setItem('myObject', JSON.stringify(obj) )
+        console.log(JSON.parse(localStorage.getItem('myObject')));
+        // localStorage.clear();
+        localStorage.removeItem('name');
+
+        let obj1 ={
+            name:'abcd',
+            designation:'developer',
+            qualification:'bcom'
+        }
+        // sessionStorage.setItem('myObject', JSON.stringify(obj) )
+        // console.log(JSON.parse(sessionStorage.getItem('myObject')));
+        // sessionStorage.removeItem('myObject');
+
+
+
+    </script>
+    
+</body>
+</html>
