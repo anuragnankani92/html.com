@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hositing</title>
+</head>
+
+<body>
+    <h1>Hello I am Hoisting</h1>
+
+    <script>
+        //Variable Hoisting
+        // console.log(a)
+        var a = 10;
+        // console.log(b)
+        let b = 5;
+        // console.log(c)
+        const c = 4;
+
+        //Function Hoisting
+
+        console.log(fun())
+        //Function Declaration
+        function fun() {
+            console.log('I am Fun')
+        }
+        // Hoisting not work in Function Expression
+
+        // const newFun=(()=>{
+        // })
+
+        // console.log(myArrow())
+        const myArrow = (a,b,c,d,e) => {
+            console.log('Value of a is : ', a)
+            console.log('Value of d is : ', b)
+            console.log('Value of c is : ', c)
+            console.log('Value of e is : ', e)
+            console.log(a+b+c+d+e)
+        }
+      myArrow(10,10,30,90,'a')
+
+        //Anonymous Function and when we call it we say say its an immediate invoke function
+        // (
+        //     ()=>{
+        //         console.log('Helloooooooo')
+        //     }
+        // )()
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

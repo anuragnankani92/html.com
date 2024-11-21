@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //map()
+
+        let arr = [1, 2, 3, 4]
+
+        let newArr = arr.map((value, index, array) => {
+            return value * array;
+        })
+        console.log(newArr)
+
+
+        let newArr1 = arr.map((value, index, array) => {
+            return value + array;
+        })
+        console.log(newArr1)
+
+        let newArr2 = arr.map((value, index, array) => {
+            return value ** value;
+        })
+        console.log(newArr2)
+        let newArr3 = arr.map((value, index, array) => value ** index);
+        console.log(newArr3)
+
+        //filter()
+
+        const ages = [32, 33, 22, 40, 10, 15];
+
+        let age = ages.filter((value) => value >= 15)
+
+        console.log(age)
+
+        //reduce()
+
+        let a = [1, 2, 3, 9, 4]
+        let b = a.reduce((value, index) => {
+            return value + index;
+        })
+        console.log(b);
+
+        let val = [1, 2, 3, 9, 4,0,1]
+        let alpha=['a','b','c']
+        let output = val.reduce((value, index, array) => {
+            return value + value
+        })
+        let output1 = alpha.reduce((value, index, array) => {
+            return value + index
+        })
+        console.log(output1);
+
+    </script>
+
+</body>
+
+</html>

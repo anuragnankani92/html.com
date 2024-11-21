@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const data = new Promise((resolve, reject) => {
+            console.log(resolve('Promise is fullfilled and i get the data'))
+        })
+        data.then((value) => {
+            console.log(value)
+        }).catch((err) => {
+            console.log(err, 'my data is failed')
+        })
+
+        // Promise.all
+        const promise1 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 1 resolved"), 1000)
+        );
+
+        const promise2 = new Promise((resolve, reject) =>
+            setTimeout(() => reject("Promise 2 REJECTED"), 500)
+        );
+
+        const promise3 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 3 resolved"), 800)
+        );
+
+        const promisesArray = [promise1, promise2, promise3];
+
+        Promise.all(promisesArray)
+            .then((value) => {
+                console.log("All promises resolved:", value);
+            })
+            .catch((error) => {
+                console.error("At least one promise rejected:", error);
+            });
+
+        // Promise.allSettled
+        const promise4 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 4 resolved"), 1000)
+        );
+
+        const promise5 = new Promise((resolve, reject) =>
+            setTimeout(() => reject("Promise 5 REJECTED"), 500)
+        );
+
+        const promise6 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 6 resolved"), 800)
+        );
+
+        const promisesArray1 = [promise4, promise5, promise6];
+
+        Promise.allSettled(promisesArray1)
+            .then((value) => {
+                console.log("All promises resolved:", value);
+            })
+            .catch((error) => {
+                console.error("At least one promise rejected:", error);
+            });
+
+        // Promise.race
+        const promise7 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 7 resolved"), 1000)
+        );
+
+        const promise8 = new Promise((resolve, reject) =>
+            setTimeout(() => reject("Promise 8 REJECTED"), 500)
+        );
+
+        const promise9 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 9 resolved"), 800)
+        );
+
+        const promisesArray2 = [promise7, promise8, promise9];
+
+        Promise.race(promisesArray2)
+            .then((value) => {
+                console.log("All promises resolved:", value);
+            })
+            .catch((error) => {
+                console.error("At least one promise rejected:", error);
+            });
+
+        // Promise.any
+        const promise10 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 7 resolved"), 1000)
+        );
+
+        const promise11 = new Promise((resolve, reject) =>
+            setTimeout(() => reject("Promise 8 REJECTED"), 500)
+        );
+
+        const promise12 = new Promise((resolve, reject) =>
+            setTimeout(() => resolve("Promise 9 resolved"), 800)
+        );
+
+        const promisesArray3 = [promise10, promise11, promise12];
+
+        Promise.any(promisesArray3)
+            .then((value) => {
+                console.log("All promises resolved:", value);
+            })
+            .catch((error) => {
+                console.error("At least one promise rejected:", error);
+            });
+
+
+    </script>
+
+</body>
+
+</html>

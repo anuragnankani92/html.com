@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <h1>Helo i am Function</h1>
+        <button onclick=myFun() >Click Me </button>
+        <button ondblclick=doubleClick()>Double Click Me </button>
+        <button onmouseout=onMouseOut()>Mouse Out Me </button>
+        <button onmouseover=onMouseOver()>Mouse Over Me </button>
+<hr>
+        <h1>Arrow Function</h1>
+        <button onclick=myArrow() >Click Me </button>
+        <button ondblclick=doubleArrow()>Double Click Me </button>
+        <button onmouseout=mouseOutArrow()>Mouse Out Me </button>
+        <button onmouseover=mouseOverArrow()>Mouse Over Me </button>
+    </center>
+    <script>
+        function myFun(){
+            let a = 10;
+            let b = 10;
+            console.log('Hello my name is Fun',a+b)
+        }
+        myFun()
+        function doubleClick(){
+        console.log('Hello my name is doubleClick')
+    }
+        function onMouseOut(){
+            console.log('Hello my name is onMouseOut')
+        }
+        function onMouseOver(){
+            console.log('Hello')
+            let a = 10;
+            let b = 10;
+            let c= a+b;
+            console.log('Hello my name is onMouseOver',c)
+        return;
+            console.log('Hello my name is onMouseOver',c)
+        }
+        // myFun()
+
+        const myArrow=()=>{
+            console.log('My Name is MyArrow')
+
+        }
+        const doubleArrow=()=>{
+            console.log('My Name is doubleArrow')
+
+        }
+        const mouseOutArrow=()=>{
+            console.log('My Name is mouseOutArrow')
+
+        }
+        const mouseOverArrow=()=> console.log('My Name is mouseOverArrow')
+
+
+    </script>
+
+    
+</body>
+</html>

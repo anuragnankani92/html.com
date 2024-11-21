@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const record = new Promise(()=>{
+            setTimeout(()=>{
+                console.log('Helloo')
+            },2000)
+            
+        }
+    )
+    record.then((value)=>{
+                console.log(value)
+            })
+           record .catch((err)=>{
+                console.log(err)
+            })
+
+            let data = new Promise((resolve,reject)=>{
+   	 setTimeout(()=>{
+       	 resolve("Your promise is resolved")
+    	},2000)
+})
+data.then((item)=>{
+    	console.log(item)
+}).catch((err)=>{
+    	console.log("Caught error",err)
+});
+
+// setTimeout(()=>{
+//     let data ='xyz'
+//     .then(()=>{
+
+//     })
+//     .catch(()=>{
+
+//     })
+// })
+
+const promise1 = new Promise((resolve,reject) =>
+  setTimeout(() => reject("Promise 1 reject"), 1000)
+)
+ promise1.then((value)=>{
+console.log(value)
+ })
+ .catch((err)=>{
+console.log(err,'rejectedddddd')
+ })
+
+ const promise2= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+console.log('i am promise 2')
+    },2000)
+ })
+ const promise3= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+console.log('i am promise 3')
+    },1000)
+ })
+
+ const mypromise = [promise2,promise3]
+ Promise.all(mypromise)
+ .then((value)=>{
+console.log(value)
+ }).catch((err)=>{
+console.log(err)
+ })
+
+
+    
+
+    </script>
+    
+</body>
+</html>

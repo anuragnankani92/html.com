@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Length
+    let arr = ['abc', 'def', 'ghi'];
+    let leng = arr.length
+    console.log(leng)
+
+    //toString
+    let names = ['abhsihek','shahrukh','hritik','salman'];
+    console.log(names)
+    let name = names.toString();
+    console.log(name)
+
+    //at
+    let num=[1,2,111,10,4,5,9];
+    let nums = num.at(2);
+    console.log(nums);
+
+    //join
+    let number=[1,2,111,10,4,5,9];
+    console.log(number,'mynumber')
+    let numbers=number.join(' ___+-----  ');
+    console.log(numbers)
+
+    //push
+    let student =['ritik','khushi','vaishnavi' ]
+        student.push('pawan')
+        student.push('vyy')
+    console.log(student)
+
+    //pop
+    let newStudent=['ritik', 'khushi', 'vaishnavi', 'pawan', 'vyy']
+    newStudent.pop()
+    console.log(newStudent,'newarrayyyyy')
+
+    //unshift
+    let newStudents=['ritik', 'khushi', 'vaishnavi', 'pawan', 'vyy'] 
+    newStudents.unshift('ankit')
+    console.log('new Student',newStudents)
+
+    //shift
+    
+    newStudents.shift()
+    console.log( 'New Valur', newStudents)
+
+    //change array element by index
+    newStudents[0]='RITIK';
+    console.log(newStudents)
+
+    newStudents[5]='RITIK';
+    console.log(newStudents)
+
+    //delete
+    delete newStudents[2]
+    console.log( 'after Delete', newStudents)
+
+    //concat
+    let fruits =['apple','banana','grapes'];
+    let fruit = ['orange','papaya','kiwi'];
+    let totalFruits=fruit.concat(fruits)
+    console.log(totalFruits)
+
+
+</script>
+
+    
+</body>
+</html>

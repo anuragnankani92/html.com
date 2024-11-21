@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Desctructuring of Array
+        const arr = ['ritik',20,'brown',9,'abcd',[100]];
+        // let fname= arr[0]
+        // let age = arr[1]
+        // let eyes = arr[2]
+        
+
+        const [fname,age,eyes,number,alpha,[num],newNum=100000]=arr;
+
+        console.log('name', fname)
+        console.log(age)
+        console.log(eyes)
+        console.log(number)
+        console.log(num)
+        console.log(newNum)
+
+        //Destructuring of Object
+        const obj={
+            fname:'abcd',
+            myage:30
+        }
+
+        const { fname:lname,myage,}=obj;
+
+        console.log( 'nameeeeee', lname)
+        console.log(myage)
+        let myname='pawan';
+        let ag=25;
+        console.log( '    my name is',myname,'and my age is',ag )
+        console.log(`    my name is ${myname} and my age is ${ag} `)
+    </script>
+    
+</body>
+</html>
