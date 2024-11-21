@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function myFun() {
+            console.log('Hello i am Fun Function')
+        }
+
+        function newFun(a, b) {
+            console.log(a + b);
+        }
+        newFun(10, 20, myFun())
+
+        // With CallBack Function
+        // A function which is passed as an argument to another function is called callBack function.
+
+        function myNew() { //This is callback function, example of callback function is setTimeOut()
+            console.log('I am new function')
+        }
+        // A function which accept a function as an arguments is called higher order function.
+        function addition(a, b, callback) {  // This is higher order function, example of higher order function is map filter reduce
+            console.log(a + b)
+            callback();
+        }
+        addition(2, 3, myNew)
+
+        addition(2, 6, () => {
+            console.log('I am anonymouse Function')
+        })
+        setTimeout(()=>{
+            console.log('hellooooo')
+        },1000)
+
+        //Callback Hell
+        setTimeout(() => {
+            console.log("First task is done.");
+
+            setTimeout(() => {
+
+                console.log("Second task is done.");
+
+                setTimeout(() => {
+
+                    console.log("Third task is done.");
+
+                    setTimeout(() => {
+
+                        console.log("Fourth task is done.");
+
+                        setTimeout(() => {
+
+                            console.log("Fifth task is done.");
+
+                            setTimeout(() => {
+
+                                console.log("sixth task is done.");
+                            }, 3000);
+
+                        }, 3000);
+
+                    }, 3000);
+
+                }, 3000);
+
+            }, 3000);
+
+        }, 3000);
+
+
+    </script>
+
+</body>
+
+</html>
