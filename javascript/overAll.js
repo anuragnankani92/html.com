@@ -84,7 +84,7 @@ function getAllUsers(){
         <td> ${value.contact}  </td>
         <td> ${value.password}  </td>
         <td>
-        <button>Edit </button>
+        <button onclick=editRow('${ value.email }') >Edit </button>
         <button onclick=deleteRow('${ value.email }') >Delete </button>
         </td>
         </tr>
@@ -111,6 +111,80 @@ localStorage.setItem('uservalue',JSON.stringify(record));
 getAllUsers()
 
 }
+
+function editRow(email){
+
+    let record = JSON.parse( localStorage.getItem('uservalue')) || [];
+let findEmail = record.findIndex((value)=>{
+    return value.email == email;
+})
+console.log(findEmail)
+if( findEmail !== -1 ){
+    let { fname, username, email, contact, password }=record[findEmail];
+
+    document.getElementById('editFname').value=fname;
+    document.getElementById('editUsername').value=username;
+    document.getElementById('editEmail').value=email;
+    document.getElementById('editContact').value=contact;
+    document.getElementById('editPassword').value=password;
+
+    // record[findEmail].fname=fname
+
+}
+
+  document.getElementById('userId').style.display='block'
+}
+
+function closeForm(){
+    // event.preventDefault()
+    document.getElementById('userId').style.display='none'
+}
+
+function updateUser(event){
+event.preventDefault()
+// debugger
+let fname= document.getElementById('editFname').value;
+let username= document.getElementById('editUsername').value;
+let email= document.getElementById('editEmail').value;
+let contact= document.getElementById('editContact').value;
+let password= document.getElementById('editPassword').value;
+
+
+let record = JSON.parse( localStorage.getItem('uservalue')) || [];
+let findEmail = record.findIndex((value)=>{
+    return value.email == email;
+})
+
+if( findEmail !== -1 ){
+    // if( email !== record[findEmail].email ){
+    //     if( record.some((value)=>{
+    //         return value.email == email;
+    //     }) ){
+    //         alert('Email Already Registered')
+    //     }
+
+
+        record[findEmail].fname=fname;
+        record[findEmail].username=username;
+        record[findEmail].email=email;
+        record[findEmail].contact=contact;
+        record[findEmail].password=password;
+        localStorage.setItem('uservalue',JSON.stringify(record))
+
+        
+        getAllUsers()
+        closeForm()
+
+    // }
+}
+
+
+
+}
+
+
+
+
 
 
 // function showAllRecord(){
